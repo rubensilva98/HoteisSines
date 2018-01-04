@@ -21,38 +21,4 @@ public class HoteisData {
 
         return hotels;
     }
-
-
-    public static String[] Hoteis = {
-            "Hotel Apartamento Sinerama",
-            "Hotel Dom Vasco",
-            "Hotel Veleiro"
-    };
-    public static String[] Descricao = {
-            "Hotel 1\n\nEste alojamento fica a 5 minutos a pé da praia. Localizado no centro de Sines, o Hotel Apartamento Sinerama dispõe de quartos e apartamentos auto-suficientes, alguns com vistas panorâmicas para o mar. O pequeno-almoço gratuito inclui sumos de frutas, ovos, bolo, pão e queijo.",
-            "Hotel Dom Vasco\n\nEscolher um Hotel não se resume à simples escolha de um quarto para dormir.\n" +
-                    "A experiência de ficar, e viver o ambiente que o rodeia, vai muito além das quatro paredes. Logo, da excelência do serviço, à atenção dedicada a cada pormenor, o Hotel Dom Vasco eleva cada estadia a uma experiência única. Acima de tudo, partilhe este modo de estar",
-
-            "Hotel Veleiro\n\nO Hotel Veleiro beneficia de uma localização privilegiada com vista para a Baía de Sines. Disponibiliza quartos com 1 cama de casal ou com 2 camas individuais, uma casa de banho privada e acesso Wi-Fi gratuito em todas as áreas. A Praia Vasco da Gama encontra-se a uma caminhada de 2 minutos."
-    };
-
-    public static String[] Contatos = {
-            "269 000 100",
-            "269 630 960",
-            "269 634 751"
-    };
-
-    public static String[] Email = {
-            "bookings.sinerama@tdhotels.com",
-            "hotel@domvasco.com",
-            "veleiro@iol.pt"
-    };
-
-    public static String[] Localização ={
-    ///Latitude longitude
-            "37.956041 -8.869475",
-            "37.957798 -8.8753941",
-            "37.9547622 -8.8683794"
-    };
-
 }

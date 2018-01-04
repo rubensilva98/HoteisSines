@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.ruben.hoteissines.model.HoteisData;
+import com.example.ruben.hoteissines.model.Hotel;
 
 
 /**
@@ -50,8 +51,9 @@ public class FragmentHoteis extends ListFragment {
             transaction.commit();
         }
         else {
+            Hotel hotel = HoteisData.getHotels().get(position);
             TextView descricaoTextView = (TextView) getActivity().findViewById(R.id.descricao_textview);
-          //  descricaoTextView.setText(HoteisData.Hoteis[position]);
+            descricaoTextView.setText(hotel.getDescription());
         }
     }
 }
