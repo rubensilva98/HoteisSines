@@ -51,4 +51,9 @@ public class HoteisAdapter extends BaseAdapter {
 
         return view;
     }
+
+    public void updateList(List<Hotel> hotels) {
+        this.hotelList = hotels;
+        notifyDataSetChanged();
+    }
 }
