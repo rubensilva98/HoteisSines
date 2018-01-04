@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.ruben.hoteissines.model.HoteisData;
+import com.example.ruben.hoteissines.model.Hotel;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,7 +39,8 @@ public class FragmentDescricao extends Fragment {
         if (args !=null){
             int currentPosition = args.getInt("position");
             TextView descricaoTextView = (TextView) getActivity().findViewById(R.id.descricao_textview);
-            descricaoTextView.setText(HoteisData.Descricao[currentPosition]);
+            Hotel hotel = HoteisData.getHotels().get(currentPosition);
+            descricaoTextView.setText(hotel.getDescription());
         }
     }
 }

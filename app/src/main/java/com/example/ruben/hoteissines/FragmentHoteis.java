@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.ruben.hoteissines.model.HoteisData;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,8 +28,8 @@ public class FragmentHoteis extends ListFragment {
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(),android.R.layout.simple_expandable_list_item_1, HoteisData.Hoteis);
-
+      //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(),android.R.layout.simple_expandable_list_item_1, HoteisData.Hoteis);
+        HoteisAdapter adapter = new HoteisAdapter(getActivity(), HoteisData.getHotels());
         setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
@@ -49,7 +51,7 @@ public class FragmentHoteis extends ListFragment {
         }
         else {
             TextView descricaoTextView = (TextView) getActivity().findViewById(R.id.descricao_textview);
-            descricaoTextView.setText(HoteisData.Hoteis[position]);
+          //  descricaoTextView.setText(HoteisData.Hoteis[position]);
         }
     }
 }
