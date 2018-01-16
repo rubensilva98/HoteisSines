@@ -27,9 +27,29 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class FragmentHoteis extends ListFragment {
-
-    private static final String fakeResponse = "[{\"Name\":\"Hotel Apartamento Sinerama\",\n" +
-            "    \"Description\":\"Este alojamento fica a 5 minutos a pé da praia. Localizado no centro de Sines, o Hotel Apartamento Sinerama dispõe de quartos e apartamentos auto-suficientes, alguns com vistas panorâmicas para o mar. O pequeno-almoço gratuito inclui sumos de frutas, ovos, bolo, pão e queijo.\", \"PhoneNumber\": \"269 000 100\", \"Email\":\"sinerama@gmail.com\",\"Location\":\"37.956041 -8.869475\"},{\"Name\":\"Dom Vasco\", \"Description\":\"JEscolher um Hotel não se resume à simples escolha de um quarto para dormir. A experiência de ficar, e viver o ambiente que o rodeia, vai muito além das quatro paredes. Logo, da excelência do serviço, à atenção dedicada a cada pormenor, o Hotel Dom Vasco eleva cada estadia a uma experiência única. Acima de tudo, partilhe este modo de estar\",\"PhoneNumber\":\"269 630 960\",\"Email\":\"hotel@domvasco.com\",\"Location\":\"37.957798 -8.8753941\"},{\"Name\":\"Star Simpson\", \"Description\":\"O Hotel Veleiro beneficia de uma localização privilegiada com vista para a Baía de Sines. Disponibiliza quartos com 1 cama de casal ou com 2 camas individuais, uma casa de banho privada e acesso Wi-Fi gratuito em todas as áreas. A Praia Vasco da Gama encontra-se a uma caminhada de 2 minutos.\",\"PhoneNumber\":\"269 634 751\",\"Email\":\"veleiro@iol.pt\",\"Location\":\"37.9547622 -8.8683794\"}]";
+    private static final String fakeResponse = "[\n" +
+            "   {\n" +
+            "       \"Name\":\"Dom Vasco\",\n" +
+            "       \"Description\":\"Escolher um Hotel não se resume à simples escolha de um quarto para dormir. A experiência de ficar, e viver o ambiente que o rodeia, vai muito além das quatro paredes. Logo, da excelência do serviço, à atenção dedicada a cada pormenor, o Hotel Dom Vasco eleva cada estadia a uma experiência única. Acima de tudo, partilhe este modo de estar.\",\n" +
+            "       \"PhoneNumber\":\"269 630 960\",\n" +
+            "       \"Email\":\"hotel@domvasco.com\",\n" +
+            "       \"Location\":\"37.957798, -8.8753941\"\n" +
+            "   },\n" +
+            "   {\n" +
+            "       \"Name\":\"Hotel Apartamento Sinerama\",\n" +
+            "       \"Description\":\"Este alojamento fica a 5 minutos a pé da praia. Localizado no centro de Sines, o Hotel Apartamento Sinerama dispõe de quartos e apartamentos auto-suficientes, alguns com vistas panorâmicas para o mar. O pequeno-almoço gratuito inclui sumos de frutas, ovos, bolo, pão e queijo.\",\n" +
+            "       \"PhoneNumber\":\"269 000 100\",\n" +
+            "       \"Email\":\"sinerama@gmail.com\",\n" +
+            "       \"Location\":\"37.956041, -8.869475\"\n" +
+            "   },\n" +
+            "   {\n" +
+            "       \"Name\":\"Hotel Veleiro\",\n" +
+            "       \"Description\":\"O Hotel Veleiro beneficia de uma localização privilegiada com vista para a Baía de Sines. Disponibiliza quartos com 1 cama de casal ou com 2 camas individuais, uma casa de banho privada e acesso Wi-Fi gratuito em todas as áreas. A Praia Vasco da Gama encontra-se a uma caminhada de 2 minutos.\",\n" +
+            "       \"PhoneNumber\":\"269 634 751\",\n" +
+            "       \"Email\":\"veleiro@iol.pt\",\n" +
+            "       \"Location\":\"37.9547622, -8.8683794\"\n" +
+            "   }\n" +
+            "]";
 
 
     private HoteisAdapter adapter;
