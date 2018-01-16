@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.ruben.hoteissines.model.HoteisData;
 import com.example.ruben.hoteissines.model.Hotel;
+import com.squareup.picasso.Picasso;
 
 
 /**
@@ -27,6 +28,9 @@ public class FragmentDescricao extends Fragment {
     private ImageView email = null;
     private ImageView phone = null;
     private ImageView gps = null;
+    private ImageView imageHotel = null;
+
+
 
 
 
@@ -42,6 +46,7 @@ public class FragmentDescricao extends Fragment {
         return inflater.inflate(R.layout.fragment_fragment_descricao, container, false);
 
     }
+
 
     @Override
     public void onStart() {
@@ -72,17 +77,7 @@ public class FragmentDescricao extends Fragment {
 
                 }
             });
-            ImageView email = (ImageView) getActivity().findViewById(R.id.imageButton);
-            email.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Uri email = Uri.parse("mailto:" + hotel.getEmail());
-                    Intent webIntent = new Intent(Intent.ACTION_SENDTO, email);
-                    webIntent.putExtra(Intent.EXTRA_EMAIL, email);
-                    startActivity(webIntent);
-                    //Toast.makeText(getActivity(), hotel.getEmail(), Toast.LENGTH_SHORT).show();
-                }
-            });
+
 
             phone = (ImageView) getActivity().findViewById(R.id.imageViewPhone);
             phone.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +113,16 @@ public class FragmentDescricao extends Fragment {
 
                 }
             });
+            imageHotel = (ImageView) getActivity().findViewById(R.id.imageViewHotel);
+
+
+           Picasso.with(getContext()).load(hotel.getImage())
+                 //  .resize(1080,1080)
+               //    .resizeDimen(80,30)
+                  // .centerInside()
+                   .into(imageHotel);
+
+
 
         }
     }

@@ -33,21 +33,24 @@ public class FragmentHoteis extends ListFragment {
             "       \"Description\":\"Escolher um Hotel não se resume à simples escolha de um quarto para dormir. A experiência de ficar, e viver o ambiente que o rodeia, vai muito além das quatro paredes. Logo, da excelência do serviço, à atenção dedicada a cada pormenor, o Hotel Dom Vasco eleva cada estadia a uma experiência única. Acima de tudo, partilhe este modo de estar.\",\n" +
             "       \"PhoneNumber\":\"269 630 960\",\n" +
             "       \"Email\":\"hotel@domvasco.com\",\n" +
-            "       \"Location\":\"37.957798, -8.8753941\"\n" +
+            "       \"Location\":\"37.957798, -8.8753941\",\n" +
+            "       \"Image\":\"https://t-ec.bstatic.com/images/hotel/max1024x768/279/27906370.jpg\"\n" +
             "   },\n" +
             "   {\n" +
             "       \"Name\":\"Hotel Apartamento Sinerama\",\n" +
             "       \"Description\":\"Este alojamento fica a 5 minutos a pé da praia. Localizado no centro de Sines, o Hotel Apartamento Sinerama dispõe de quartos e apartamentos auto-suficientes, alguns com vistas panorâmicas para o mar. O pequeno-almoço gratuito inclui sumos de frutas, ovos, bolo, pão e queijo.\",\n" +
             "       \"PhoneNumber\":\"269 000 100\",\n" +
             "       \"Email\":\"sinerama@gmail.com\",\n" +
-            "       \"Location\":\"37.956041, -8.869475\"\n" +
+            "       \"Location\":\"37.956041, -8.869475\",\n" +
+            "       \"Image\":\"https://t-ec.bstatic.com/images/hotel/max1024x768/245/24518691.jpg\"\n" +
             "   },\n" +
             "   {\n" +
             "       \"Name\":\"Hotel Veleiro\",\n" +
             "       \"Description\":\"O Hotel Veleiro beneficia de uma localização privilegiada com vista para a Baía de Sines. Disponibiliza quartos com 1 cama de casal ou com 2 camas individuais, uma casa de banho privada e acesso Wi-Fi gratuito em todas as áreas. A Praia Vasco da Gama encontra-se a uma caminhada de 2 minutos.\",\n" +
             "       \"PhoneNumber\":\"269 634 751\",\n" +
             "       \"Email\":\"veleiro@iol.pt\",\n" +
-            "       \"Location\":\"37.9547622, -8.8683794\"\n" +
+            "       \"Location\":\"37.9547622, -8.8683794\",\n" +
+            "       \"Image\":\"https://t-ec.bstatic.com/images/hotel/max1024x768/245/24518691.jpg\"\n" +
             "   }\n" +
             "]";
 
@@ -105,8 +108,9 @@ public class FragmentHoteis extends ListFragment {
                     String phoneNumber = jsonObject.getString("PhoneNumber");
                     String email = jsonObject.optString("Email");
                     String location = jsonObject.optString("Location");
+                    String image = jsonObject.optString("Image");
 
-                    Hotel hotel = new Hotel(name, description, phoneNumber, email, location);
+                    Hotel hotel = new Hotel(name, description, phoneNumber, email, location, image);
                     hotels.add(hotel);
                 }
             } catch (Exception e) {

@@ -10,13 +10,21 @@ public class Hotel {
     private String phoneNumber;
     private String email;
     private String location;
+    private String image;
 
-    public Hotel(String name, String description, String phoneNumber, String email, String location) {
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    public Hotel(String name, String description, String phoneNumber, String email, String location, String image) {
         this.name = name;
         this.description = description;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.location = location;
+        this.image = image;
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public Hotel(String name, String description, String phoneNumber, String email, String location) {
     }
 
     public String getName() {
@@ -57,5 +65,13 @@ public class Hotel {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
