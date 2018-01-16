@@ -113,6 +113,7 @@ public class FragmentDescricao extends Fragment {
 
                 }
             });
+
             imageHotel = (ImageView) getActivity().findViewById(R.id.imageViewHotel);
 
 

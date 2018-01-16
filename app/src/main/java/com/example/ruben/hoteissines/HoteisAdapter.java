@@ -51,11 +51,16 @@ public class HoteisAdapter extends BaseAdapter {
         }
 
         TextView textView = view.findViewById(R.id.textViewName);
-     //   ImageView imageView =view.findViewById(R.id.imageViewHotel);
+       // ImageView imageView =view.findViewById(R.id.imageViewHotel);
 
         Hotel hotel = getItem(i);
         textView.setText(hotel.getName());
-              
+
+        imageHotel = (ImageView) view.findViewById(R.id.imageView);
+
+        Picasso.with(context).load(hotel.getImage()).resize(900,700).centerCrop().into(imageHotel);
+
+
 
 
         return view;

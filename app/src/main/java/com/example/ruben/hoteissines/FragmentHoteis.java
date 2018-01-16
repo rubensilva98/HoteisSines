@@ -50,7 +50,7 @@ public class FragmentHoteis extends ListFragment {
             "       \"PhoneNumber\":\"269 634 751\",\n" +
             "       \"Email\":\"veleiro@iol.pt\",\n" +
             "       \"Location\":\"37.9547622, -8.8683794\",\n" +
-            "       \"Image\":\"https://t-ec.bstatic.com/images/hotel/max1024x768/245/24518691.jpg\"\n" +
+            "       \"Image\":\"https://aff.bstatic.com/images/hotel/840x460/499/49986191.jpg\"\n" +
             "   }\n" +
             "]";
 
