@@ -76,8 +76,8 @@ public class FragmentDescricao extends Fragment {
             email.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Uri email = Uri.parse(hotel.getEmail());
-                    Intent webIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + email));
+                    Uri email = Uri.parse("mailto:" + hotel.getEmail());
+                    Intent webIntent = new Intent(Intent.ACTION_SENDTO, email);
                     webIntent.putExtra(Intent.EXTRA_EMAIL, email);
                     startActivity(webIntent);
                     //Toast.makeText(getActivity(), hotel.getEmail(), Toast.LENGTH_SHORT).show();
