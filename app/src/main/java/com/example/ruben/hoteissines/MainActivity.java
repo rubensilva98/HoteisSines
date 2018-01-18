@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
             firstFragment.setArguments(getIntent().getExtras());
 
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, firstFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, firstFragment).commit();
         }
     }
 

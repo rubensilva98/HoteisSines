@@ -69,7 +69,6 @@ public class FragmentDescricao extends Fragment {
             email.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getActivity(), "testee", Toast.LENGTH_SHORT).show();
                     Uri email = Uri.parse(hotel.getEmail());
                     Intent webIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + email));
                     webIntent.putExtra(Intent.EXTRA_EMAIL, email);
@@ -83,7 +82,6 @@ public class FragmentDescricao extends Fragment {
             phone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getActivity(), "phone", Toast.LENGTH_SHORT).show();
 
                     Uri phone = Uri.parse(hotel.getPhoneNumber());
 
@@ -100,16 +98,12 @@ public class FragmentDescricao extends Fragment {
             gps.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getActivity(), "" +hotel.getLocation(), Toast.LENGTH_LONG).show();
 
                     Uri gps = Uri.parse(hotel.getLocation());
                     Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + hotel.getLocation()+ "("+hotel.getName()+")");
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                     mapIntent.setPackage("com.google.android.apps.maps");
                         startActivity(mapIntent);
-
-
-
 
                 }
             });
